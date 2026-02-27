@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Hufe | Economist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Noticia+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --teal: #12b7b3;
+      --teal-dark: #0e9996;
+      --black: #000000;
+      --white: #ffffff;
+      --text: #2d2d2d;
+      --nav-height: 60px;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      min-width: 320px;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid #e8e8e8;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Noticia Text', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    /* ── Main content ── */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 70px 40px 80px;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* ── Photo ── */
+    .profile-photo img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+
+    /* ── Bio ── */
+    .profile-bio h1 {
+      font-family: 'Noticia Text', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 28px;
+      line-height: 1.15;
+    }
+
+    .profile-bio p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .profile-bio p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .profile-bio a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    .profile-bio a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Social icons ── */
+    .social-icons {
+      display: flex;
+      gap: 14px;
+      margin-top: 30px;
+      align-items: center;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .social-icons a:hover {
+      opacity: 1;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    footer a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .profile {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .profile-photo img {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      main {
+        padding: 40px 24px 60px;
+      }
+
+      .nav-inner {
+        padding: 0 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Paul Hufe</a>
+      <ul class="nav-links">
+        <li><a href="research.html">Research</a></li>
+        <li><a href="pdfs/cv.pdf" target="_blank">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="profile">
+
+      <div class="profile-photo">
+        <img src="assets/profile.jpg" alt="Paul Hufe">
+      </div>
+
+      <div class="profile-bio">
+        <h1>Paul Hufe</h1>
+
+        <p>
+          I am a Senior Lecturer (Assistant Professor) at the
+          University of Bristol. I am also affiliated with IZA,
+          CESifo, IFS, and HCEO.
+        </p>
+
+        <p>
+          My research interests lie at the intersection of public,
+          labor, and normative economics.
+        </p>
+
+        <p>
+          I hold a UKRI Future Leaders Fellowship (GBP 1.6m,
+          2024&ndash;2028) for the project &ldquo;Unfair inequality
+          in the labor market: a global study.&rdquo;
+        </p>
+
+        <p>
+          Furthermore, I am currently a Co-I of the
+          <a href="https://essgn.org/" target="_blank">European
+          Social Science Genetics Network</a> &mdash; a doctoral
+          network funded by the European Union&rsquo;s Horizon
+          Europe program.
+        </p>
+
+        <p>
+          I obtained my Ph.D. from LMU Munich and have been visiting
+          Cornell University, Princeton University, and FAIR at
+          NHH Bergen.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://scholar.google.de/citations?hl=en&user=2Oe_Cn4AAAAJ"
+             target="_blank" title="Google Scholar">
+            <img src="assets/icon-scholar.png" alt="Google Scholar">
+          </a>
+          <a href="https://twitter.com/PaulHufe"
+             target="_blank" title="Twitter / X">
+            <img src="assets/icon-twitter.png" alt="Twitter">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="mailto:paul.hufe@bristol.ac.uk">paul.hufe@bristol.ac.uk</a>
+  </footer>
+
+</body>
+</html>
