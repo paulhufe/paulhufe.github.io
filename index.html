@@ -14,6 +14,10 @@
       padding: 0;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     :root {
       --rust: #a0522d;
       --rust-dark: #7d3f22;
@@ -29,7 +33,6 @@
       font-family: 'Open Sans', Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
-      min-width: 320px;
     }
 
     /* ── Navigation ── */
@@ -78,6 +81,8 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       transition: color 0.2s;
+      /* ensure comfortable tap target height */
+      padding: 4px 0;
     }
 
     .nav-links a:hover {
@@ -168,7 +173,7 @@
       color: var(--rust-dark);
     }
 
-    /* ── Responsive ── */
+    /* ── Responsive: tablet and below ── */
     @media (max-width: 720px) {
       .profile {
         grid-template-columns: 1fr;
@@ -176,12 +181,16 @@
       }
 
       .profile-photo img {
-        max-width: 200px;
+        max-width: 180px;
         margin: 0 auto;
       }
 
       .profile-bio {
         max-width: 100%;
+      }
+
+      .profile-bio h1 {
+        font-size: 1.9rem;
       }
 
       main {
@@ -190,6 +199,26 @@
 
       .nav-inner {
         padding: 0 24px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+    }
+
+    /* ── Responsive: small phones ── */
+    @media (max-width: 400px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-brand {
+        font-size: 1rem;
       }
     }
   </style>
