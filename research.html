@@ -15,12 +15,11 @@
     }
 
     :root {
-      --teal: #12b7b3;
-      --teal-dark: #0e9996;
+      --rust: #a0522d;
+      --rust-dark: #7d3f22;
       --black: #000000;
       --white: #ffffff;
       --text: #2d2d2d;
-      --muted: #666;
       --nav-height: 60px;
     }
 
@@ -81,7 +80,7 @@
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--teal);
+      color: var(--rust);
     }
 
     /* ── Main content ── */
@@ -128,7 +127,7 @@
       color: var(--black);
       margin-bottom: 24px;
       padding-bottom: 10px;
-      border-bottom: 2px solid var(--teal);
+      border-bottom: 2px solid var(--rust);
     }
 
     /* ── Paper list ── */
@@ -156,17 +155,19 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--white);
-      background: var(--teal);
+      color: var(--rust);
+      background: transparent;
+      border: 1px solid var(--rust);
       padding: 2px 8px;
       border-radius: 3px;
       text-decoration: none;
       vertical-align: middle;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
 
     .pdf-link:hover {
-      background: var(--teal-dark);
+      background: var(--rust);
+      color: var(--white);
     }
 
     /* ── Footer ── */
@@ -179,7 +180,7 @@
     }
 
     footer a {
-      color: var(--teal-dark);
+      color: var(--rust-dark);
       text-decoration: none;
     }
 
