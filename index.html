@@ -6,7 +6,7 @@
   <title>Paul Hufe | Economist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Noticia+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noticia+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -17,16 +17,18 @@
     :root {
       --rust: #a0522d;
       --rust-dark: #7d3f22;
-      --black: #000000;
+      --black: #1a1a1a;
       --white: #ffffff;
+      --bg: #f8f6f3;
       --text: #2d2d2d;
-      --nav-height: 60px;
+      --muted: #6b6b6b;
+      --nav-height: 64px;
     }
 
     body {
       font-family: 'Open Sans', Arial, sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: var(--bg);
       min-width: 320px;
     }
 
@@ -36,7 +38,7 @@
       top: 0;
       z-index: 100;
       background: var(--white);
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e4e0db;
       height: var(--nav-height);
       display: flex;
       align-items: center;
@@ -86,38 +88,53 @@
     main {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 70px 40px 80px;
+      padding: 80px 40px 100px;
     }
 
     .profile {
       display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 60px;
-      align-items: start;
+      grid-template-columns: 240px 1fr;
+      gap: 52px;
+      align-items: center;
     }
 
     /* ── Photo ── */
     .profile-photo img {
       width: 100%;
       display: block;
-      border-radius: 2px;
+      border-radius: 4px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center top;
     }
 
     /* ── Bio ── */
+    .profile-bio {
+      max-width: 520px;
+    }
+
     .profile-bio h1 {
       font-family: 'Noticia Text', serif;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--black);
-      margin-bottom: 28px;
       line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .profile-bio .subtitle {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--rust);
+      letter-spacing: 0.03em;
+      margin-bottom: 28px;
     }
 
     .profile-bio p {
-      font-size: 1rem;
-      line-height: 1.75;
+      font-size: 0.975rem;
+      line-height: 1.8;
       color: var(--text);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .profile-bio p:last-of-type {
@@ -135,36 +152,40 @@
 
     /* ── Footer ── */
     footer {
-      border-top: 1px solid #e8e8e8;
-      padding: 24px 40px;
+      border-top: 1px solid #e4e0db;
+      padding: 20px 40px;
       text-align: center;
       font-size: 0.8rem;
-      color: #888;
+      color: var(--muted);
     }
 
     footer a {
-      color: var(--rust-dark);
+      color: var(--muted);
       text-decoration: none;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: var(--rust-dark);
     }
 
     /* ── Responsive ── */
     @media (max-width: 720px) {
       .profile {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 32px;
       }
 
       .profile-photo img {
-        max-width: 280px;
+        max-width: 200px;
         margin: 0 auto;
       }
 
+      .profile-bio {
+        max-width: 100%;
+      }
+
       main {
-        padding: 40px 24px 60px;
+        padding: 48px 24px 72px;
       }
 
       .nav-inner {
@@ -195,45 +216,40 @@
 
       <div class="profile-bio">
         <h1>Paul Hufe</h1>
+        <p class="subtitle">Senior Lecturer &middot; University of Bristol</p>
 
         <p>
-          I am a Senior Lecturer (Assistant Professor) at the
-          University of Bristol. I am also affiliated with IZA,
-          CESifo, IFS, and HCEO.
+          I am an economist working at the intersection of public, labor,
+          and normative economics. I am also affiliated with IZA, CESifo,
+          IFS, and HCEO.
         </p>
 
         <p>
-          My research interests lie at the intersection of public,
-          labor, and normative economics.
+          My research centers on equality of opportunity: measuring how much
+          of today&rsquo;s inequality is driven by circumstances beyond
+          individual control, and identifying which early-life factors are
+          responsible. I hold a UKRI Future Leaders Fellowship (GBP&nbsp;1.6m,
+          2024&ndash;2028) for the project &ldquo;Unfair inequality in the
+          labor market: a global study.&rdquo;
         </p>
 
         <p>
-          I hold a UKRI Future Leaders Fellowship (GBP 1.6m,
-          2024&ndash;2028) for the project &ldquo;Unfair inequality
-          in the labor market: a global study.&rdquo;
+          I am also a Co-I of the
+          <a href="https://essgn.org/" target="_blank">European Social Science
+          Genetics Network</a>, a doctoral network funded by the European
+          Union&rsquo;s Horizon Europe program. I obtained my Ph.D. from
+          LMU Munich and have held visiting positions at Cornell University,
+          Princeton University, and FAIR at NHH Bergen.
         </p>
-
-        <p>
-          Furthermore, I am currently a Co-I of the
-          <a href="https://essgn.org/" target="_blank">European
-          Social Science Genetics Network</a> &mdash; a doctoral
-          network funded by the European Union&rsquo;s Horizon
-          Europe program.
-        </p>
-
-        <p>
-          I obtained my Ph.D. from LMU Munich and have been visiting
-          Cornell University, Princeton University, and FAIR at
-          NHH Bergen.
-        </p>
-
       </div>
 
     </div>
   </main>
 
   <footer>
+    Paul Hufe &nbsp;&middot;&nbsp;
     <a href="mailto:paul.hufe@bristol.ac.uk">paul.hufe@bristol.ac.uk</a>
+    &nbsp;&middot;&nbsp; 2026
   </footer>
 
 </body>
