@@ -107,10 +107,10 @@
 
     /* ── Contact details ── */
     .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      max-width: 360px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 640px;
       margin: 0 auto;
     }
 
@@ -198,6 +198,11 @@
         font-size: 1.7rem;
       }
 
+      .contact-details {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
       .book-link {
         padding: 10px 20px;
       }
@@ -250,11 +255,6 @@
       </div>
 
       <div class="detail-block">
-        <h2>Email</h2>
-        <p><a href="mailto:paul.hufe@bristol.ac.uk">paul.hufe@bristol.ac.uk</a></p>
-      </div>
-
-      <div class="detail-block">
         <h2>Office Hours</h2>
         <p>Thursday, 4pm&ndash;6pm</p>
         <a class="book-link"
@@ -266,9 +266,7 @@
   </main>
 
   <footer>
-    Paul Hufe &nbsp;&middot;&nbsp;
-    <a href="mailto:paul.hufe@bristol.ac.uk">paul.hufe@bristol.ac.uk</a>
-    &nbsp;&middot;&nbsp; 2026
+    Paul Hufe &nbsp;&middot;&nbsp; 2026
   </footer>
 
 </body>
