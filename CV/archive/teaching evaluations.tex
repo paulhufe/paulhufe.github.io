@@ -1,0 +1,53 @@
+\documentclass[11pt, a4paper]{letter}
+
+\usepackage{mathpazo}						%font style
+\usepackage{geometry}
+\usepackage{lipsum}
+\usepackage{graphicx} 
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}					
+
+\geometry{
+    top=1cm,
+    bottom=1cm,
+    left=2.5cm,
+    right=2.5cm,
+}
+\usepackage[singlespacing]{setspace} 		%package to adjust line spacing
+\setlength{\parindent}{0em}					%set paragraph indentation
+\longindentation=0pt
+
+\signature{\vspace{-1cm}\hspace{-.75cm}\includegraphics[width=.15\textwidth, angle=270]{signature.jpg} \\ Paul Hufe \\ Senior Lecturer \\ School of Economics \\ University of Bristol \\ }
+\date{}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+{\LARGE \centering \textbf{Paul Hufe}}\\
+{\small \faMousePointer~\href{https://www.paulhufe.net}{www.paulhufe.net}~~~~~~\faEnvelope~\href{mailto:paul.hufe@bristol.ac.uk}{paul.hufe@bristol.ac.uk}~~~~~~\faPhone~+44 (0) 740 330 3660}
+\end{center}
+
+% Letter
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\let\newpage\relax
+\vspace{1cm}
+
+\begin{letter}{University of Leipzig \\ Wirtschaftswissenschaftliche Fakultät \\ Grimmaische Straße 12 \\ 04109 Leipzig}
+
+
+\opening{Dear members of the selection committee,}
+
+My current employer, the University of Bristol, does not issue personalized teaching evaluations. Therefore, I cannot provide the requested evidence.
+
+
+\begin{flushleft}
+\closing{Sincerely,}
+\end{flushleft}
+
+\end{letter}
+\endgroup
+
+\end{document}

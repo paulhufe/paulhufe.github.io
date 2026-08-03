@@ -1,0 +1,122 @@
+% Language
+\usepackage[english]{babel} 				%option for paper in german
+% !TeX spellcheck = en_US
+
+% Font
+\usepackage[utf8]{inputenc}					%package to set font encoding
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}					
+%\usepackage[default]{lato}					%font style
+\usepackage{mathpazo}						%font style
+\usepackage{eurosym} 						%package to get eurosymbol per \euro
+\usepackage{csquotes} 						%flexible quotation marks
+\usepackage[super]{nth}						%superscripts for numbers 2nd, 3rd etc
+% \usepackage{sansmath}\sansmath				%Turning on sans-serif math mode
+
+% Page Formatting
+\setlength{\textheight}{27cm}				%text height
+\setlength{\textwidth}{18cm}				%text width
+\setlength{\oddsidemargin}{-1cm}			%page margin
+\setlength{\evensidemargin}{-1cm} 			%page margin
+\setlength{\topmargin}{-3cm}				%top margin
+\setlength{\footnotesep}{.5cm}				%space between footnote and text
+\usepackage[singlespacing]{setspace} 		%package to adjust line spacing
+\setlength{\parindent}{0em}					%set paragraph indentation
+\usepackage{pdflscape} 						%package to rotate pages
+\usepackage{layouts}						%package to show page formatting settings and convert into different units of measurement
+
+% Bibliography
+\usepackage[backend=biber,citestyle=authoryear-comp,bibstyle=authoryear,natbib=true,doi=false,isbn=false,url=false,eprint=false,giveninits=true, maxnames=10, maxbibnames=10,uniquename=false,uniquelist=false]{biblatex}
+\addbibresource{~/OneDrive - University of Bristol/10 Literature/Archived/Personal.bib}	%path to library
+\AtBeginBibliography{
+	\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}} 			%family names in small caps
+}
+\renewbibmacro{in:}{}											%No "In: " before journal name
+\renewbibmacro*{volume+number+eid}{%							%Volume in brackets
+	\printfield{volume}%
+	%  \setunit*{\adddot}										% DELETED
+	\setunit*{\addnbspace}										% NEW (optional); there's also \addnbthinspace
+	\printfield{number}%
+	\setunit{\addcomma\space}%
+	\printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+% Floats
+\usepackage{float} 							%allowing for H float specifier
+\usepackage{caption}						%define caption font
+\captionsetup{labelsep=endash, justification=centering,font=bf,labelfont=sc, skip=5pt, position=top, singlelinecheck=false, parskip=5pt}
+\usepackage{placeins}						%package to allow for float barriers
+\setlength{\intextsep}{1cm}					%Specify distance of floats to text
+\setlength{\floatsep}{1cm} 					%Specify distance between two floats
+
+% Graphics
+\usepackage{tikz} 	%package for creating graphics
+\usetikzlibrary{calc}
+
+
+% Tables
+\usepackage{booktabs} 						%package for nice tables
+\usepackage{multirow} 						%package to combine cells in tables
+\usepackage{longtable}						%package to allow for long tables
+\usepackage{makecell}						%package to allow line breaks in cells
+\usepackage{array}							%package to format tabular environments
+%\captionsetup[table]{belowskip=10pt}		%distance text caption
+%\captionsetup[longtable]{aboveskip=10pt}	%distance text caption
+
+
+
+% Figures
+%\captionsetup[figure]{aboveskip=10pt}		%distance text caption
+\usepackage{graphicx} 						%package to include graphics
+\usepackage{svg}							%include svg images
+\usepackage{subfigure}						%package for subfloats
+
+% Math
+\usepackage{amsfonts,amssymb, amsthm, mathtools} 	%packages to facilitate writing math
+\newtheorem{theorem}{Proposition}					%define "Proposition"-environment
+\renewcommand\qedsymbol{$\blacksquare$}				%define qed-symbol
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\eur}{\text{\euro}}
+
+% Other
+\usepackage{comment} 	%package to allow for commenting out entire sections
+\usepackage{soul} 		%package to highlight sections
+\usepackage{color}		%colorcoding
+\newcommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+\usepackage{enumitem}	%package to allow for enumeration/itemization
+\usepackage{titling}	%control package for \maketitle
+
+% JEL/Keywords
+\providecommand{\keywords}[1]{\textbf{Keywords:} #1}
+\providecommand{\JEL}[1]{\textbf{JEL-Codes:} #1}
+
+%Format Section Headers
+\usepackage[explicit]{titlesec} %package for title formatting
+\titleformat{\section}{\normalfont\bfseries\large\raggedright\uppercase}{\thesection}{1em}{\large #1}
+\titleformat{\subsection}{\normalfont\it\large}{\thesubsection}{1em}{\large #1}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+%Format Paragraph Headers
+%Format Paragraph Headers
+\makeatletter
+\renewcommand\subparagraph{%
+	\@startsection {subparagraph}{5}{\z@ }{0ex \@plus 1ex
+		\@minus .2ex}{-1em}{\normalfont \normalsize \it }}%
+\makeatother
+
+%Footnotes/Endnotes
+\usepackage{endnotes}
+%\let\footnote=\endnote
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}

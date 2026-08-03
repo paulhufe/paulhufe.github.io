@@ -1,0 +1,21 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is './CV.blg'
+[27] biber-darwin:340> INFO - === Mon Aug  3, 2026, 07:53:10
+[44] Biber.pm:420> INFO - Reading './CV.bcf'
+[71] Biber.pm:994> INFO - Found 22 citekeys in bib section 0
+[77] Biber.pm:4463> INFO - Processing section 0
+[82] Biber.pm:4654> INFO - Looking for bibtex file '~/OneDrive - University of Bristol/10 Literature/Archived/Personal.bib' for section 0
+[342] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1476] bibtex.pm:1519> INFO - Found BibTeX data source '/Users/paulhufe/OneDrive - University of Bristol/10 Literature/Archived/Personal.bib'
+[1637] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1637] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1637] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1637] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1650] bbl.pm:676> INFO - Writing './CV.bbl' with encoding 'UTF-8'
+[1654] bbl.pm:779> INFO - Output to ./CV.bbl
+[1655] Biber.pm:131> WARN - legacy year field 'forthcoming' in entry 'Arold2025' is not an integer - this will probably not sort properly.
+[1655] Biber.pm:131> WARN - legacy year field 'ongoing' in entry 'Hufe2026' is not an integer - this will probably not sort properly.
+[1655] Biber.pm:131> WARN - legacy year field 'ongoing' in entry 'Hufe2026a' is not an integer - this will probably not sort properly.
+[1655] Biber.pm:131> WARN - legacy year field 'ongoing' in entry 'Wienand2026' is not an integer - this will probably not sort properly.
+[1655] Biber.pm:131> WARN - legacy year field 'ongoing' in entry 'Almas2026' is not an integer - this will probably not sort properly.
+[1655] Biber.pm:133> INFO - WARNINGS: 5
