@@ -1,2 +1,12 @@
 .DS_Store
 
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+indent.log
